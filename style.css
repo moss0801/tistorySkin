@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+a {
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* 데스크 탑 및 고해상도 */
+.container {
+  font-family: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 1.3em;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6em;
+}
+
+.container a {
+  cursor: pointer;
+}
+
+.container a:hover {
+  border-bottom: 1px dotted;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container header {
+  height: 200px;
+  padding-top: 102px;
+  padding-bottom: 30px;
+}
+
+/* iPad 가로 */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    font-size: 1.7em;
+  }
+
+  .container header {
+    height: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+/* 스마트 폰 및 iPad 가로 */
+@media only screen and (max-width: 768px) {
+  .container {
+    font-size: 1.26em;
+    width: 100%;
+  }
+
+  .container header {
+    text-align: center;
+  }
+}
