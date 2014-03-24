@@ -2,7 +2,10 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 
-a {
+/* 우측 상단 메뉴바 숨기기 */
+#tistorytoolbarid { display: none; }
+
+* {
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -10,13 +13,14 @@ a {
 }
 /* 데스크 탑 및 고해상도 */
 .container {
-  font-family: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+  font-family: 'NanumGothic', 'Open Sans', 'Malgun Gothic';
   padding-right: 25px;
   padding-left: 25px;
   font-size: 1.3em;
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto;
   line-height: 1.6em;
+  border: 1px solid;
 }
 
 .container a {
@@ -29,23 +33,64 @@ a {
   text-decoration: none;
 }
 
-.container header {
-  height: 200px;
-  padding-top: 102px;
-  padding-bottom: 30px;
+/* (s) header */
+header {
+  margin-top: 70px; margin-bottom: 30px;
 }
+
+header .site-title a:hover {
+  border-bottom: none;
+}
+
+/* (e) header */
+
+/* (s) Adsense */
+#top-adsense {
+  text-align: center;
+  margin: 0 auto;
+}
+@media(max-width: 500px) { 
+  #top-adsense div:first-child { padding-left: 0px; padding-right: 0; }
+}
+
+.top-left-adsense { width: 336px; height: 280px; border: 1px solid; }
+@media(max-width: 500px) { 
+  .top-left-adsense { width: 320px; height: 50px; } }
+
+.top-right-adsense { width: 336px; height: 280px; border: 1px solid; }
+@media(max-width: 767px) { 
+  .top-right-adsense { width: 320px; height: 50px; } 
+  #top-right-adsense { display: none; }
+}
+
+.my_adslot { width: 728px; height: 90px; }
+@media(max-width: 500px) { .my_adslot { width: 320px; height: 50px; } }
+/* (e) Adsense */
+
+/* (s) article-category */
+.article-category {
+  width: 320px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.6em;
+}
+
+.article-category, .article-category a {
+  color: #999 !important;
+}
+
+/* (e) article-category */
 
 /* iPad 가로 */
 @media only screen and (max-width: 1200px) {
   .container {
     width: 100%;
-    font-size: 1.7em;
+    font-size: 1.5em;
   }
 
-  .container header {
-    height: 100px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+  .container .header {
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -56,7 +101,9 @@ a {
     width: 100%;
   }
 
-  .container header {
+  .container .header {
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
